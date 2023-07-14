@@ -1,0 +1,19 @@
+{
+  "name": "07_13_07_23_todo_api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "gitignore": "^0.7.0",
+    "uuid": "^9.0.0"
+  }
+}
