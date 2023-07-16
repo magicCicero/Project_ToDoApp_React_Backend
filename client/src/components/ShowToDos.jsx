@@ -2,6 +2,8 @@ import { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { UpdateToDoListContext } from "../context/Context";
 import "./ShowToDos.css";
+import DeleteBtn from "./DeleteBtn";
+import ToogleBtn from "./ToogleBtn";
 const ShowToDos = () => {
   const { listlength, setListLength } = useContext(UpdateToDoListContext);
   const [todos, setTodos] = useState([]);
@@ -26,6 +28,8 @@ const ShowToDos = () => {
             <h3>{todo.title}</h3>
             <p>{todo.body}</p>
             <h6>{todo.id}</h6>
+            <DeleteBtn id={todo.id} />
+            <ToogleBtn />
           </div>
         ))}
       </section>

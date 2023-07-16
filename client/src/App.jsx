@@ -26,10 +26,12 @@ function App() {
     <>
       <UpdateToDoListContext.Provider value={{ listlength, setListLength }}>
         <h1>ToDos App</h1>
-        <AddToDo />
         <ShowToDos />
-        <UpdateToDo />
-        <DeleteToDo />
+        <section className="tools-container">
+          <AddToDo />
+          <UpdateToDo />
+          <DeleteToDo />
+        </section>
       </UpdateToDoListContext.Provider>
     </>
   );

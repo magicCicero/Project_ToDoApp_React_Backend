@@ -2,6 +2,7 @@ import { useEffect, useState, useContext } from "react";
 import axios from "axios";
 import { v4 as uuid } from "uuid";
 import { UpdateToDoListContext } from "../context/Context";
+import "./AddToDo.css";
 
 const AddToDo = () => {
   const [todos, setTodos] = useState([]);
@@ -40,20 +41,21 @@ const AddToDo = () => {
 
   return (
     <>
-      <h1>Add ToDo</h1>
-      <button onClick={postNewToDo}>Add ToDo</button>
-      <input
-        type="text"
-        value={newToDoTitle}
-        onChange={(e) => setNewToDoTitle(e.target.value)}
-        placeholder="title"
-      />
-      <input
-        type="text"
-        value={newToDoBody}
-        onChange={(e) => setNewToDoBody(e.target.value)}
-        placeholder="body"
-      />
+      <section className="add-todo-container">
+        <button onClick={postNewToDo}>Add ToDo</button>
+        <input
+          type="text"
+          value={newToDoTitle}
+          onChange={(e) => setNewToDoTitle(e.target.value)}
+          placeholder="Title"
+        />
+        <input
+          type="text"
+          value={newToDoBody}
+          onChange={(e) => setNewToDoBody(e.target.value)}
+          placeholder="Body"
+        />
+      </section>
     </>
   );
 };

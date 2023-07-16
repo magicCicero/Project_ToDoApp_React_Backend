@@ -1,6 +1,6 @@
 import { useEffect, useState, useContext } from "react";
 import axios from "axios";
-
+import "./UpdateToDo.css";
 import { UpdateToDoListContext } from "../context/Context";
 
 const UpdateToDo = () => {
@@ -40,26 +40,27 @@ const UpdateToDo = () => {
 
   return (
     <>
-      <h1>Update ToDo</h1>
-      <button onClick={postNewToDo}>Update ToDo</button>
-      <input
-        type="text"
-        value={oldId}
-        onChange={(e) => setOldId(e.target.value)}
-        placeholder="ID"
-      />
-      <input
-        type="text"
-        value={newUpdatedTitle}
-        onChange={(e) => setNewUpdatedTitle(e.target.value)}
-        placeholder="new Title"
-      />
-      <input
-        type="text"
-        value={newUpdatedBody}
-        onChange={(e) => setNewUpdatedBody(e.target.value)}
-        placeholder="new Body"
-      />
+      <section className="update-container">
+        <button onClick={postNewToDo}>Update ToDo</button>
+        <input
+          type="text"
+          value={oldId}
+          onChange={(e) => setOldId(e.target.value)}
+          placeholder="ID"
+        />
+        <input
+          type="text"
+          value={newUpdatedTitle}
+          onChange={(e) => setNewUpdatedTitle(e.target.value)}
+          placeholder="new Title"
+        />
+        <input
+          type="text"
+          value={newUpdatedBody}
+          onChange={(e) => setNewUpdatedBody(e.target.value)}
+          placeholder="new Body"
+        />
+      </section>
     </>
   );
 };
